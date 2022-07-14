@@ -6,7 +6,7 @@ function register() {
     // alert('result:' + name);
     const lname = document.querySelector("#lname").value;
     const email = document.querySelector("#email").value;
-    const gender = "";//document.querySelector("#gender").value;
+    let gender = "";//document.querySelector("#gender").value;
     const ele = document.getElementsByName('gender');
 
     for (i = 0; i < ele.length; i++) {
