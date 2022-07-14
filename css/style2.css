@@ -1,0 +1,17 @@
+body{
+    background-color: bisque;
+    background-image:url(stud.png);
+    background-repeat:no-repeat;
+    background-size: 500px 400px;
+    background-position: right;
+   
+
+}
+
+.container {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    font-size: 17px;
+    font:bold;
+}
+
