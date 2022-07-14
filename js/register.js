@@ -8,9 +8,9 @@ function register() {
     let email = document.querySelector("#email").value;
     let gender = "";//document.querySelector("#gender").value;
     var ele = document.getElementsByName('gender');
-              
-    for(i = 0; i < ele.length; i++) {
-        if(ele[i].checked) {
+
+    for (i = 0; i < ele.length; i++) {
+        if (ele[i].checked) {
             gender = ele[i].value;
         }
     }
@@ -19,6 +19,7 @@ function register() {
 
     let city = document.querySelector("#city").value;
     let state = document.querySelector("#state").value;
+    let form = document.querySelector("#regform");
 
 
     // alert('result:' + state);
@@ -39,17 +40,17 @@ function register() {
         alert("enter the valid emailid")
         return false;
     }
-    
+
 
     const todoobj = {
         fname: fname,
         lname: lname,
         email: email,
-       gender:gender,
-        address:address,
+        gender: gender,
+        address: address,
         city: city,
-        state:state,
-        created_by:"Jayanthi",
+        state: state,
+        created_by: "Jayanthi",
         created_date: new Date().toJSON()
 
 
@@ -60,6 +61,7 @@ function register() {
 
     axios.post(url, todoobj).then(res => {
         alert("successfully logged in");
+        form.reset();
         console.log(res.data);
     });
 }
