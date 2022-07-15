@@ -5,12 +5,13 @@ body {
     background-position: right;
     background-size: 500px 500px;
     height: 600px;
-    width: 800px;
+    /* width: 800px; */
   }
   h3 {
   text-align: center;
   }
-  .container {
+
+  /* .container {
     color: black;
     font-family: sans-serif;
     font-size: 20px;
@@ -23,9 +24,10 @@ body {
     border-radius: 5px;
   
     padding: 20px;
-  }
+  } */
   
   .col-25 {
+    
     float: left;
     width: 25%;
     margin-top: 6px;

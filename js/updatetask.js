@@ -62,6 +62,8 @@ function updateTaskForm() {
       document.querySelector("#id").value = user.id;
       document.querySelector("#name").value = user.name;
       document.querySelector("#status").value = user.status;
+      document.querySelector("#createdBy").value = user.created_by;
+      document.querySelector("#createdDate").value = user.created_date.substr(0,19);
     });
 
   }

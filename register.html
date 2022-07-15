@@ -6,31 +6,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <style>
-        body {background-color: powderblue;}
+        body {background-color: pink}
         h1 {color: blue;} 
         p {color: red;} 
       </style> -->
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <a class="navbar-brand" href="index.html">TodoApp</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-            aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav navbar-dark bg-primary me-auto mt-2 mt-lg-0">
-                <!-- !--<ul class="navbar-nav me-auto mt-2 mt-lg-0">--! -->
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html"> Home </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="register.html">Register</a>
-                </li>
-            </ul>
-        </div>
 
-    </nav>
+    <header id = "header">
+        
+    </header>
+    
     <section>
         <div class="container">
             <h3> Registration </h3>
@@ -114,8 +101,8 @@
         </div>
 
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-md-10">
+            <div class="col-5"></div>
+            <div class="col-md-4">
                 <button type="submit" class="btn btn-success"> Submit </button>
             </div>
         </div>
@@ -134,6 +121,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
         integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+      <script>
+        //Jquery cdn
+
+        $("#header").load("header.html");
+      </script>
 
    <script src ="js/todoapp-service.js"></script>
    <script src ="js/register.js"></script>

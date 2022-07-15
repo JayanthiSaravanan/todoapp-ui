@@ -2,7 +2,7 @@ function addTask() {
     event.preventDefault();
 
 
-    let name = document.querySelector("#name").value;
+    const name = document.querySelector("#name").value;
 
 
 
@@ -13,9 +13,9 @@ function addTask() {
       return false;
     }
 
-    alert("successfully added task");
+    
 
-    const userobj = {
+    const taskObj = {
       name: name,
       status: "P",
       created_by: "jayanthi",
@@ -23,11 +23,12 @@ function addTask() {
       modified_date: new Date().toJSON(),
       modified_by: 'Jayanthi'
     };
-    console.log(userobj);
+    console.log(taskObj);
     const url = "http://localhost:3000/tasks"
 
-    axios.post(url, userobj).then(res => {
+    axios.post(url, taskObj).then(res => {
 
       console.log(res.data);
+      alert("Successfully added task");
     });
   }
