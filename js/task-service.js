@@ -3,10 +3,10 @@ function addTask(taskObj){
     return axios.post(url, taskObj);
 }
 
-// function updateTask(taskObj){
-//     const url = "http://localhost:3000/tasks/" + taskObj.id;
-//     return axios.put(url, taskObj);
-// }
+function updateTask(taskObj){
+    const url = "http://localhost:3000/tasks/" + taskObj.id;
+    return axios.put(url, taskObj);
+}
 
 
 
@@ -20,7 +20,7 @@ function gettodoapp(id){
     return axios.get(url);
 }
 
-// function deleteTask(id){
-//     const url = "http://localhost:3000/tasks/" +id ;
-//     return axios.delete(url);
-// }
+function deleteTask(id){
+    const url = "http://localhost:3000/tasks/" +id ;
+    return axios.delete(url);
+}
