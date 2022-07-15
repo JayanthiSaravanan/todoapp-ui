@@ -23,6 +23,34 @@
           alert(" enter the valid password ")
           return false;
         }
-  
+        const url = "http://localhost:3000/users";
+
+        axios.get(url)
+        
+        .then(res => {
+
+            let users = res.data; // []
+            console.table(users);
+
+            let isValidLogin = false;
+            for(let user of users){
+              if(user.email == email && user.password == password){
+                localStorage.setItem("LOGGED_IN_USERID", user.id);
+                localStorage.setItem("LOGGED_IN_USERNAME", user.fname);
+
+                isValidLogin = true;
+                break;
+              }
+            }
+
+            if(isValidLogin){
+              alert("Successfully LoggedIn");
+              window.location.href="listtask.html";
+            }
+            else{
+              alert("INvalid Login Credentials")
+            }
+
         // alert('successfully Loggedin');
+      });
       }

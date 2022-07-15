@@ -11,14 +11,16 @@
               let tasks = res.data; // []
               console.table(tasks);
               let content = "";
+              let i= 0;
               for(let task of tasks){
                   content = content +
                   `
                   <tr>
+                  <td>${++i}</td>
           <td> ${task.name}</td>
           <td> ${task.status}</td>
-          <td>Jayanthi</td>
-          <td><i class="fa-solid fa-calendar-days"></i> 10-jul-2021</td>
+          <td>${task.created_by}</td>
+          <td><i class="fa-solid fa-calendar-days"></i> ${task.created_date}</td>
           <td> <a href="updatetask.html?id=${task.id}" class="btn btn-info text-white"><i class="fa-solid fa-pencil"></i></a>
             <a href="deletetask.html?id=${task.id}" class="btn btn-danger text-white"><i class="fa-solid fa-trash"></i></a>
           </td>

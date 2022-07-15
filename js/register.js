@@ -6,6 +6,7 @@ function register() {
     // alert('result:' + name);
     const lname = document.querySelector("#lname").value;
     const email = document.querySelector("#email").value;
+    const password =document.querySelector("#password").value;
     let gender = "";//document.querySelector("#gender").value;
     const ele = document.getElementsByName('gender');
 
@@ -46,6 +47,7 @@ function register() {
         fname: fname,
         lname: lname,
         email: email,
+        password: password,
         gender: gender,
         address: address,
         city: city,
@@ -64,7 +66,7 @@ function register() {
 
     axios.post(url, userObj).then(res => {
         console.log(res.data);
-        alert("successfully Registered");
+        alert("Successfully Registered");
         form.reset();
 
     });

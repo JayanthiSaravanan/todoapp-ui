@@ -13,15 +13,15 @@ function addTask() {
       return false;
     }
 
-    
+    const createdBy = localStorage.getItem("LOGGED_IN_USERNAME");
 
     const taskObj = {
       name: name,
       status: "P",
-      created_by: "jayanthi",
+      created_by: createdBy,
       created_date: new Date().toJSON(),
       modified_date: new Date().toJSON(),
-      modified_by: 'Jayanthi'
+      modified_by: createdBy
     };
     console.log(taskObj);
     const url = "http://localhost:3000/tasks"
