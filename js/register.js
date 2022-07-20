@@ -56,7 +56,7 @@ function register() {
         created_date: new Date().toJSON(),
         modified_by: "Jayanthi",
         modified_date: new Date().toJSON(),
-        role: "user"
+        role: "USER"
 
 
 
