@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Assign Task</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header id = "header">
+
+  </header>
+  <div class="container">
+    <h3> Assigned Task</h3>
+
+    <form onsubmit="assignTask()">
+
+    <div class="row">
+      <div class="col-25">
+        <label for="id"> Task ID: </label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="id" name="id" placeholder="Enter Task Id" required autofocus>
+
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="assign"> Assigned To: </label>
+      </div>
+      
+      <div class="col-75">
+        <select class="form control" id="assign" placeholder = "select">
+          <option value="Jayanthi">Jayanthi</option>
+          <option value="Naresh">Naresh</option>
+          <option value="Nitin">Nitin</option>
+        </select>
+      </div>
+    </div>
+     <br/> <br/>
+
+      <div class="row">
+        <div class="col-3">   </div> 
+        <div class="col-md-8">
+          <button btn="submit" class="btn btn-success">submit</button>
+          <button btn="reset" class="btn btn-danger">Reset</button>
+        </div>
+        
+
+
+      </div>
+    </div>
+
+  </form>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+      <script src = "js/assignedtask.js"></script>
+
+
+<script>
+      $("#header").load ("header.html");
+
+    </script>
+</body>
+
+</html>
