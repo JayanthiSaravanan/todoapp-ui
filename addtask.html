@@ -26,7 +26,19 @@
             <input type="text" id="name" name="name" placeholder="Enter Task Name" required autofocus><br /><br />
           </div>
         </div>
-
+       
+        <div class = "row">
+          <div class = "col-25">
+            <label for = "name"> Priority:</label>
+          </div>
+          <div class = "col-25">
+          <select class="form-control"  id="priority" placeholder="select" required>
+            <option value = "HIGH"> High </option>
+            <option value = "MEDIUM"> Medium </option>
+            <option valuee = "LOW"> Low </option>
+          </select>
+          </div>
+        </div><br /> <br />
         <div class="row">
           <div class="col-3"></div>
             <div class="col-md-8">
@@ -65,7 +77,5 @@
   <script src="js/task-service.js"> </script>
   <script src="js/addtask.js"> </script>
 
-
 </body>
-
 </html>
