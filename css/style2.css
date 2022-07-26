@@ -15,3 +15,10 @@ body{
     font:bold;
 }
 
+body {
+    background-image: url("images/image1.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 200px;
+    background-attachment: scroll;
+  }
