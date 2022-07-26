@@ -68,6 +68,6 @@ function register() {
         console.log(res.data);
         alert("Successfully Registered");
         form.reset();
-
+window.location.href = "listuser.html";
     });
 }

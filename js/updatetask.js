@@ -3,6 +3,7 @@ function updateTaskForm() {
 
     let id = document.querySelector("#id").value;
     let name = document.querySelector("#name").value;
+    let priority = document.querySelector("#priority").value;
     let status = document.querySelector("#status").value;
     //let cname = 'Jayanthi';
     // let cname = document.querySelector("#cname").value;
@@ -30,26 +31,31 @@ function updateTaskForm() {
     //   return false;
     // }
 
-    alert("successfully updated task");
 
 
     const loggedInUsername = localStorage.getItem("LOGGED_IN_USERNAME");
 
-    const userobj = {
+    const taskObj = {
       id: id,
       name: name,
       created_by: loggedInUsername,
+      priority: priority,
       status: status,
       created_date: createdDate,
       modified_date: new Date().toJSON(),
       modified_by: loggedInUsername
     };
-    console.log(userobj);
+    console.log(taskObj);
     const url = "http://localhost:3000/tasks/" + id;
 
-    axios.put(url, userobj).then(res => {
+    axios.put(url, taskObj).then(res => {
 
       console.log(res.data);
+      
+    
+      alert("successfully updated task");
+    toastr.success("successfully updated task");
+      //window.location.href ="listtask.html";
     });
   }
 
@@ -64,6 +70,7 @@ function updateTaskForm() {
       console.log(user);
       document.querySelector("#id").value = user.id;
       document.querySelector("#name").value = user.name;
+      document.querySelector("#priority").value = user.priority;
       document.querySelector("#status").value = user.status;
       document.querySelector("#createdBy").value = user.created_by;
       document.querySelector("#createdDate").value = user.created_date.substr(0,19);
@@ -79,3 +86,4 @@ function updateTaskForm() {
   getTask (id);
   
 
+ 

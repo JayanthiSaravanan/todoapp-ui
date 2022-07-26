@@ -34,3 +34,19 @@ function getUserList() {
         });
 }
 getUserList();
+
+
+
+
+  //security
+  // authorization- whether user is allowed to access this page.
+  function checkUserLoggedIn(){
+
+    const loggedInUsername = localStorage.getItem("LOGGED_IN_USERNAME");
+    if(!loggedInUsername){
+      alert("Please Login");
+      window.location.href="login.html";
+    }
+  }
+  
+  checkUserLoggedIn();

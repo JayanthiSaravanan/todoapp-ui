@@ -13,6 +13,7 @@ function deleteTask() {
     axios.delete(url).then(res => {
         console.log(res.data);
         alert("Successfully deleted");
+        window.location.href ="listtask.html";
     }).catch(err => {
         console.error(err);
         alert("Unable to delete");
